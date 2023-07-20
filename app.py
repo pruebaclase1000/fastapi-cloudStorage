@@ -50,7 +50,7 @@ async def actualizar_archivos(file: UploadFile):
     blob = obtenerbucket(filename)
 
     # Verificar que el archivo exista en el bucket
-    if blob.exits():
+    if blob.exists():
         blob.delete()
 
         contenido = await file.read()
